@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kazakh Bank Transfer Fee Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Bank Transfer Fee Calculator (Kaspi 🡆 Halyk & vice‑versa)</h1>
+
+  <!-- Amount Input -->
+  <label for="amount">Enter Amount (KZT):</label>
+  <input type="number" id="amount" min="0" placeholder="e.g. 100000">
+
+  <!-- From Bank -->
+  <label for="from_bank">From Bank:</label>
+  <select id="from_bank">
+    <option value="kaspi">Kaspi</option>
+    <option value="halyk">Halyk</option>
+  </select>
+
+  <!-- To Bank -->
+  <label for="to_bank">To Bank:</label>
+  <select id="to_bank">
+    <option value="kaspi">Kaspi</option>
+    <option value="halyk">Halyk</option>
+  </select>
+
+  <!-- Transfer speed -->
+  <label for="speed">Transfer Type:</label>
+  <select id="speed">
+    <option value="standard">Standard</option>
+    <option value="instant">Instant</option>
+  </select>
+
+  <!-- Withdrawal Consideration -->
+  <label>
+    <input type="checkbox" id="withdraw_after">
+    Withdraw after transfer?
+  </label>
+
+  <button onclick="calculate()">Calculate</button>
+
+  <div id="result"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
